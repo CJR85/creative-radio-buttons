@@ -69,6 +69,12 @@ label input:checked ~ span.check::before {
   box-shadow: 0 0 0 transparent;
 }
 
+label input:checked ~ span.cross::before {
+  background: #f00;
+  box-shadow: 0 0 0 transparent;
+  transform: rotate(-45deg) translate(10px, -10px);
+}
+
 label span::after {
   content: '';
   position: absolute;
@@ -88,5 +94,11 @@ label input:checked ~ span.check::after {
 }
 
 label input:checked ~ span.check {
-  transform: rotate(-45deg) translate(10px, -9px);
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+label input:checked ~ span.cross::after {
+  background: #f00;
+  box-shadow: 0 0 0 transparent;
+  transform: rotate(-45deg) translate(10px, 10px);
 }
